@@ -34,6 +34,7 @@ RUN cd $HOME && \
 
 # hhvm
 RUN echo 'hhvm.libxml.ext_entity_whitelist = file,http' >> /etc/hhvm/php.ini
+RUN echo 'hhvm.libxml.ext_entity_whitelist = file,http' >> /etc/hhvm/server.ini
 RUN echo 'hhvm.http.slow_query_threshold = 30000' >> /etc/hhvm/php.ini
 RUN echo 'xdebug.enable=1' >> /etc/hhvm/php.ini
 RUN echo 'date.timezone = "Europe/Paris"' >> /etc/hhvm/php.ini
